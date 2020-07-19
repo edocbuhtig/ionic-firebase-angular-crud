@@ -26,3 +26,7 @@
 ```
 ng add @angular/fire
 ```
+
+### Tutorial
+
+[Ionic 5 Firebase/Firestore CRUD App with Angular 9 and Ionic](https://www.fullstackblog.in/ionic-firebase-crud-angular-app/)
