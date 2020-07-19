@@ -4,6 +4,11 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
+
+
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -13,15 +18,31 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    public fbauth: AngularFireAuth,
+    public ngroute: Router
   ) {
-    this.initializeApp();
-  }
+    const authfbObserver = fbauth.authState.subscribe( user => {
+      if (user) {
+        console.log(user)
+        this.ngroute.navigate(['home']);
+        authfbObserver.unsubscribe();
+      } else {
+        console.log(user)
+        this.ngroute.navigate(['login']);
+        authfbObserver.unsubscribe();
+      }
+    });
 
-  initializeApp() {
     this.platform.ready().then(() => {
+      // Okay, so the platform is ready and our plugins are available.
+      // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
   }
+
+  
+  
+  
 }

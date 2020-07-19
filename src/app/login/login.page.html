@@ -1,0 +1,31 @@
+<ion-content color="light">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="9" size-md="9" class="ion-text-center">
+        <form [formGroup]="loginform" (ngSubmit)="doLogin()" novalidate>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" [formControl]="loginform.controls['useremail']" required></ion-input>
+          <div *ngIf="loginform.controls['useremail'].dirty && !loginform.controls['useremail'].valid">
+            <p *ngIf="loginform.controls['useremail'].errors.InvalidEmail">Please enter a valid email id</p>
+          </div>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [formControl]="loginform.controls['userpass']" required></ion-input>
+        </ion-item>
+        <ion-button
+                type="submit"
+                color="primary"
+                expand="full" 
+                class="ion-activatable ripple-parent"
+                [disabled]="!loginform.valid">
+          LOGIN
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </ion-button>
+        <ion-button fill="clear" [routerLink]="['/signup']">New User? Register Now</ion-button>
+      </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

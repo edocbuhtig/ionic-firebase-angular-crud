@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="9" size-md="9" class="ion-text-center">
+        <form [formGroup]="signupform" (ngSubmit)="doSignup()" novalidate>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="text" [formControl]="signupform.controls['useremail']" required></ion-input>
+          <div *ngIf="signupform.controls['useremail'].dirty && !signupform.controls['useremail'].valid">
+            <p *ngIf="signupform.controls['useremail'].errors.InvalidEmail">Please enter a valid email id</p>
+          </div>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [formControl]="signupform.controls['userpass']" required></ion-input>
+          <div *ngIf="signupform.controls['userpass'].dirty && !signupform.controls['userpass'].valid">
+            <p *ngIf="signupform.controls['userpass'].errors?.minlength">Password must be min 6 characters</p>
+          </div>
+        </ion-item>
+        <ion-button
+                type="submit"
+                color="primary"
+                expand="full" 
+                class="ion-activatable ripple-parent"
+                [disabled]="!signupform.valid">
+          REGISTER
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </ion-button>
+      </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+

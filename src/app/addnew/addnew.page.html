@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="9" size-md="9">
+        <form [formGroup]="addnewform" (ngSubmit)="doAddnew()" novalidate>
+        <ion-item>
+          <ion-label position="floating">Product Title</ion-label>
+          <ion-input type="text" [formControl]="addnewform.controls['producttitle']" required></ion-input>
+          <div *ngIf="addnewform.controls['producttitle'].dirty && !addnewform.controls['producttitle'].valid">
+            <p *ngIf="addnewform.controls['producttitle'].errors">Product title must be minimum 6 characters</p>
+          </div>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Product Price</ion-label>
+          <ion-input type="text" [formControl]="addnewform.controls['productprice']" required></ion-input>
+          <div *ngIf="addnewform.controls['productprice'].dirty && !addnewform.controls['productprice'].valid">
+            <p *ngIf="addnewform.controls['productprice'].errors?.minlength">Product price must be minimum 2 digits</p>
+            <p *ngIf="!addnewform.controls['productprice'].errors?.minlength && addnewform.controls['productprice'].errors?.pattern">Product price must be in digits</p>
+          </div>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Product Description</ion-label>
+          <ion-textarea auto-grow="true" [formControl]="addnewform.controls['productdesc']"></ion-textarea>
+          <div *ngIf="addnewform.controls['productdesc'].dirty && !addnewform.controls['productdesc'].valid">
+            <p *ngIf="addnewform.controls['productdesc'].errors?.minlength">Product description must be minimum 6 characters</p>
+          </div>
+        </ion-item>
+        <ion-button
+            type="submit"
+            color="primary"
+            expand="full" 
+            class="ion-activatable ripple-parent"
+            [disabled]="!addnewform.valid">
+          ADD
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </ion-button>
+        <ion-button
+                type="button"
+                [routerLink]="['/home']"
+                color="danger"
+                expand="full" 
+                class="ion-activatable ripple-parent">
+          CANCEL
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </ion-button>
+      </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
