@@ -21,4 +21,8 @@
 }
 ```
 
+### Install Angular Firebase Official Library
 
+```
+ng add @angular/fire
+```
