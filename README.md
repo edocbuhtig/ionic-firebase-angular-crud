@@ -2,7 +2,7 @@
 
 ### Setup Firebase/Firestore (Free plan)
 
-- From Firebase console enable Eamil & Password Authentication 
+- From Firebase console enable Email & Password Authentication 
 - If you are using Firestore for the first time, initialize the database once going to firestore database dashboard
 - Go to database (Rules) tab and allow read, write for all users, only for this CRUD app testing, not recommended for production apps.
 
