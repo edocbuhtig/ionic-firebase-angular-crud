@@ -1,5 +1,9 @@
 ### Ionic 5 Firebase/Firestore CRUD App with Angular 9 and Ionic Skeleton Loading Animation
 
+### Demo on YouTube
+
+[Ionic 5 Firebase/Firestore CRUD App with Angular 9](https://www.youtube.com/watch?v=N23yDIQlzVI&feature=youtu.be)
+
 ### Setup Firebase/Firestore (Free plan)
 
 - From Firebase console enable Email & Password Authentication 
@@ -29,4 +33,6 @@ ng add @angular/fire
 
 ### Tutorial
 
-[Ionic 5 Firebase/Firestore CRUD App with Angular 9 and Ionic](https://www.fullstackblog.in/ionic-firebase-crud-angular-app/)
+[Ionic 5 Firebase/Firestore CRUD App with Angular 9](https://www.fullstackblog.in/ionic-firebase-crud-angular-app/)
+
+
