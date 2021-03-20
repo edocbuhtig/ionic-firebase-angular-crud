@@ -1,8 +1,8 @@
-### Ionic 5 Firebase/Firestore CRUD App with Angular 9 and Ionic Skeleton Loading Animation
+### Ionic 5 Google Firestore complete authentication and CRUD operations integrating Angular 11 with bonus (Skeleton) Loading Animation
 
 ### Demo on YouTube
 
-[Ionic 5 Firebase/Firestore CRUD App with Angular 9](https://www.youtube.com/watch?v=N23yDIQlzVI&feature=youtu.be)
+[Ionic 5 Firebase/Firestore CRUD App with Angular 11](https://www.youtube.com/watch?v=N23yDIQlzVI&feature=youtu.be)
 
 ### Setup Firebase/Firestore (Free plan)
 
@@ -25,7 +25,7 @@
 }
 ```
 
-### Install Angular Firebase Official Library
+### Install Angular Firebase/Firestore Official (NPM) Library
 
 ```
 ng add @angular/fire
