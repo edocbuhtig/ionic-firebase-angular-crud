@@ -1,10 +1,10 @@
-### Ionic 5 Google Firestore complete authentication and CRUD operations integrating Angular 11 with bonus (Skeleton) Loading Animation
+### Ionic Firebase Authentication
 
 ### Demo on YouTube
 
-[Ionic 5 Firebase/Firestore CRUD App with Angular 11](https://www.youtube.com/watch?v=N23yDIQlzVI&feature=youtu.be)
+[Ionic Firebase Authentication & CRUD](https://www.youtube.com/watch?v=N23yDIQlzVI&feature=youtu.be)
 
-### Setup Firebase/Firestore (Free plan)
+### Setup Firebase/Firestore (Free Spark plan)
 
 - From Firebase console enable Email & Password Authentication 
 - If you are using Firestore for the first time, initialize the database once going to firestore database dashboard
