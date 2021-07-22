@@ -1,6 +1,6 @@
 ### Ionic Firebase Authentication
 
-### Demo on YouTube
+### Demo
 
 [Ionic Firebase Authentication & CRUD](https://www.youtube.com/watch?v=N23yDIQlzVI&feature=youtu.be)
 
